@@ -1,3 +1,3 @@
 #!/bin/bash
-pip install --upgrade pip
-pip -r requirements.txt
+pip3 install --upgrade pip
+pip3 -r requirements.txt
