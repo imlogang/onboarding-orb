@@ -6,4 +6,9 @@ steps:
   - run:
       name: Install Python
       command: <<include(scripts/InstallPython.sh)>>
+  - run: 
+      name: Install Pip && requirements.txt
+      command: <<include(scripts/pip_install.sh)
+      
+
 
