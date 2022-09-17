@@ -2,18 +2,8 @@ description: >
   Installs python
 # What will this command do?
 # Descriptions should be short, simple, and clear.
-parameters:
-  to:
-    type: string
-    default: "World"
-    description: "Hello to whom?"
 steps:
   - run:
-      environment:
-        PARAM_TO: <<parameters.to>>
-      name: Hello Greeting
-      command:
-        name: Install Python
-        run: |
-          sudo apt-get update
-          sudo apt-get install python3 -y
+      name: Install Python
+      command: <<include(scripts/InstallPython.sh)>>
+
