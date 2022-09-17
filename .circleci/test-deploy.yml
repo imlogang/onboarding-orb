@@ -22,7 +22,7 @@ jobs:
       - image: cimg/base:current
     steps:
       - checkout
-      - onboarding-orb/install_python.yml
+      - onboarding-orb/install_python
 workflows:
   test-deploy:
     jobs:
