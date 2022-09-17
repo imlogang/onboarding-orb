@@ -1,3 +1,3 @@
 #!/bin/bash
-python -m ensurepip --upgrade
+python3 -m ensurepip --upgrade
 pip -r requirements.txt
