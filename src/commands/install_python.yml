@@ -7,5 +7,5 @@ steps:
       name: Install Python
       command: <<include(scripts/InstallPython.sh)>>
   - run:
-      name: Install Pip && a dependency 
+      name: Install Pip && a dependency
       command: <<include(scripts/pip_install.sh)>>
