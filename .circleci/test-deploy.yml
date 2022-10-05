@@ -40,6 +40,7 @@ workflows:
           requires:
             - orb-tools/pack
             - command-tests
+            - python-install-test
           context: orb-publishing
           filters:
             branches:
