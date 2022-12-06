@@ -11,4 +11,5 @@ parameters:
     description: "Hello to whom?"
 steps:
   - greet:
+      name: hello world
       to: << parameters.to >>
