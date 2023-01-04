@@ -51,6 +51,7 @@ workflows:
             - orb-tools/pack
             - command-tests
             - python-install-test
+            - node-install-test
           context: orb-publishing
           filters:
             branches:

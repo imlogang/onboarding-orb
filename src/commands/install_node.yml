@@ -3,4 +3,4 @@ description: >
 # What will this job do?
 
 steps:
-  - install_python
+  - node/install
