@@ -1,0 +1,6 @@
+description: >
+  Install node
+# What will this job do?
+
+steps:
+  - node/install

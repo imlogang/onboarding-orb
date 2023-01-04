@@ -2,6 +2,7 @@ version: 2.1
 orbs:
   onboarding-orb: logan/onboarding-orb@dev:<<pipeline.git.revision>>
   orb-tools: circleci/orb-tools@11.1
+  node: circleci/node@5.0.3
 
 filters: &filters
   tags:
@@ -23,6 +24,13 @@ jobs:
     steps:
       - checkout
       - onboarding-orb/install_python
+  node-install-test:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - onboarding-orb/install_node
+    
 workflows:
   test-deploy:
     jobs:
@@ -30,6 +38,8 @@ workflows:
       - command-tests:
           filters: *filters
       - python-install-test:
+          filters: *filters
+      - node-install-test:
           filters: *filters
       - orb-tools/pack:
           filters: *filters
@@ -41,6 +51,7 @@ workflows:
             - orb-tools/pack
             - command-tests
             - python-install-test
+            - node-install-test
           context: orb-publishing
           filters:
             branches:

@@ -1,5 +1,5 @@
 description: >
-  Sample description
+  Say hello world
 # What will this job do?
 
 executor: default
