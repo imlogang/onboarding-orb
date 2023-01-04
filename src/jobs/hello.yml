@@ -1,5 +1,5 @@
 description: >
-  Sample description
+  Say hello world
 # What will this job do?
 
 executor: default
@@ -11,5 +11,4 @@ parameters:
     description: "Hello to whom?"
 steps:
   - greet:
-      name: hello world
       to: << parameters.to >>

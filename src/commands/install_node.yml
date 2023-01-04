@@ -1,0 +1,8 @@
+description: >
+  Install node
+# What will this job do?
+
+executor: default
+
+steps:
+  - node/install
