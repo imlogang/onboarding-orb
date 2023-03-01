@@ -22,6 +22,8 @@ workflows:
       - orb-tools/publish:
           orb-name: logan/onboarding-orb
           vcs-type: << pipeline.project.type >>
+          circleci-api-host: https://gcp.logangodsey.com
+          circleci-app-host: https://app.gcp.logangodsey.com
           requires:
             [orb-tools/lint, orb-tools/review, orb-tools/pack, shellcheck/check]
           # Use a context to hold your publishing token.
