@@ -33,4 +33,6 @@ workflows:
           pipeline-number: << pipeline.number >>
           vcs-type: << pipeline.project.type >>
           requires: [orb-tools/publish]
+          circleci-api-host: https://gcp.logangodsey.com
+          circleci-app-host: https://app.gcp.logangodsey.com
           filters: *filters
