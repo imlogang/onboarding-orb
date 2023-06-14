@@ -20,7 +20,7 @@ workflows:
       - shellcheck/check:
           filters: *filters
       - orb-tools/publish:
-          orb-name: onboarding-orb
+          orb_name: logan/onboarding-orb
           vcs_type: github
           vcs-type: << pipeline.project.type >>
           requires:
