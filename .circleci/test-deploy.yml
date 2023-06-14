@@ -44,8 +44,8 @@ workflows:
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
-          orb-name: logan/onboarding-orb
-          vcs-type: << pipeline.project.type >>
+          orb_name: logan/onboarding-orb
+          vcs_type: << pipeline.project.type >>
           pub-type: production
           requires:
             - orb-tools/pack
