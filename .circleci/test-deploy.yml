@@ -41,6 +41,8 @@ workflows:
           filters: *filters
       - node-install-test:
           filters: *filters
+      - onboarding-orb/hello:
+          filters: *filters
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
@@ -52,6 +54,7 @@ workflows:
             - command-tests
             - python-install-test
             - node-install-test
+            - onboarding-orb/hello
           context: orb-publishing
           filters:
             branches:
