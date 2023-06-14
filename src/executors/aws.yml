@@ -4,4 +4,4 @@ description: >
 docker:
   - image: 397187125081.dkr.ecr.us-east-1.amazonaws.com/testing
     aws_auth:
-      oidc_role_arn: arn:aws:iam::397187125081:role/cci_image_new 
+      oidc_role_arn: arn:aws:iam::397187125081:role/cci_image_new
