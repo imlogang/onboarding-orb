@@ -2,7 +2,7 @@ description: >
   Say hello world
 # What will this job do?
 
-executor: default
+executor: aws
 
 parameters:
   to:
