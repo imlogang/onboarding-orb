@@ -21,7 +21,6 @@ workflows:
           filters: *filters
       - orb-tools/publish:
           orb_name: logan/onboarding-orb
-          vcs_type: github
           vcs-type: << pipeline.project.type >>
           requires:
             [orb-tools/lint, orb-tools/review, orb-tools/pack, shellcheck/check]
