@@ -10,7 +10,7 @@ parameters:
     default: "World"
     description: "Hello to whom?"
   ip_ranges:
-    type: boolean 
+    type: string 
     default: false
 
 circleci_ip_ranges: << parameters.ip_ranges >>
