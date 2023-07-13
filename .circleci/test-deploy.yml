@@ -43,6 +43,11 @@ workflows:
           filters: *filters
       - onboarding-orb/hello:
           filters: *filters
+      - onboarding-orb/hello_default:
+          filters: *filters
+          executor: 
+            name: onboarding-orb/default
+            tag: "20.4.0"
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
