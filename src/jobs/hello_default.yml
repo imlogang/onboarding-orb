@@ -9,6 +9,12 @@ parameters:
     type: string
     default: "World"
     description: "Hello to whom?"
+  ip_ranges:
+    type: boolean 
+    default: false
+
+circleci_ip_ranges: << parameters.ip_ranges >>
+
 steps:
   - greet:
       to: << parameters.to >>
