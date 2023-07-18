@@ -2,13 +2,18 @@ description: >
   Say hello world
 # What will this job do?
 
-executor: default
-circleci_ip_ranges: << parameters.ip_ranges >>
-
+executor: default-<<parameters.para2>>-<<parameters.para3>>
+  
 parameters:
-  ip_ranges:
-    type: boolean
-    default: false
+  para1:
+    default: "Hello"
+    type: string
+  para2:
+    default: "abc"
+    type: string
+  para3:
+    default: 2020
+    type: integer
 
 steps:
   - run: echo "hello"
