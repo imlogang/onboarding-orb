@@ -13,7 +13,7 @@ parameters:
     type: string
   para3:
     default: 2020
-    type: integer
+    type: string
 
 steps:
   - run: echo "hello"
