@@ -12,7 +12,7 @@ parameters:
     default: "abc"
     type: string
   para3:
-    default: 2020
+    default: "2020"
     type: string
 
 steps:
