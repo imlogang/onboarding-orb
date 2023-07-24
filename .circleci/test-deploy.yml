@@ -4,6 +4,20 @@ orbs:
   orb-tools: circleci/orb-tools@12.0
   node: circleci/node@5.0.3
 
+para1: &para1 [
+  'Hello',
+  'World'
+]
+
+para2: &para2 [
+  'abc',
+  'efg',
+]
+
+para3: &para3 [
+2020, 2021, 
+]
+
 filters: &filters
   tags:
     only: /.*/
@@ -43,6 +57,11 @@ workflows:
           filters: *filters
       - onboarding-orb/hello:
           filters: *filters
+          matrix:
+            parameters:
+              para1: *para1
+              para2: *para2
+              para3: *para3
       - onboarding-orb/hello_default:
           filters: *filters
           executor: 
