@@ -4,5 +4,18 @@ description: >
 
 executor: default
 
+parameters:
+    para1:
+      default: "Hello"
+      type: string
+    para2:
+      default: "abc"
+      type: string
+    para3:
+      default: 2020
+      type: integer
+    executors:
+      default: default
+      type: executor
 steps:
   - run: echo "hello"
