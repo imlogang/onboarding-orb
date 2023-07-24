@@ -57,16 +57,13 @@ workflows:
           filters: *filters
       - onboarding-orb/hello:
           filters: *filters
+      - onboarding-orb/hello_default:
+          filters: *filters
           matrix:
             parameters:
               para1: *para1
               para2: *para2
               para3: *para3
-      - onboarding-orb/hello_default:
-          filters: *filters
-          executor: 
-            name: onboarding-orb/default
-            tag: "20.4.0"
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
