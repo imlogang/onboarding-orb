@@ -6,12 +6,14 @@ orbs:
 
 para1: &para1 [
   'Hello',
-  'World'
+  'World',
+  'mynamejeff'
 ]
 
 para2: &para2 [
   'abc',
   'efg',
+  'hij'
 ]
 
 para3: &para3 [
