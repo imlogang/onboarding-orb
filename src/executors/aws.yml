@@ -14,4 +14,4 @@ parameters:
 docker:
   - image: 397187125081.dkr.ecr.us-east-1.amazonaws.com/testing
     aws_auth:
-      oidc_role_arn: arn:aws:iam::<< paramters.account_id >>:role/<< parameters.image_name >>
+      oidc_role_arn: arn:aws:iam::<< parameters.account_id >>:role/<< parameters.image_name >>
