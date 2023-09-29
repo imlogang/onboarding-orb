@@ -3,7 +3,7 @@ description: >
   If you do not require an executor, you can simply delete this directory.
 
 parameters:
-  acount_id:
+  account_id:
     type: string
     default: "397187125081"
   image_name:
