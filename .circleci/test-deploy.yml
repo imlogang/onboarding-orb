@@ -59,6 +59,8 @@ workflows:
           filters: *filters
       - onboarding-orb/hello:
           filters: *filters
+          executor: default
+          circleci_ip_ranges: true
       - onboarding-orb/hello_default:
           filters: *filters
           matrix:
