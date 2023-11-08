@@ -34,7 +34,7 @@ jobs:
     docker:
       - image: cimg/base:current
     steps:
-      onboarding-orb/echo
+      - onboarding-orb/echo
     
 workflows:
   test-deploy:
