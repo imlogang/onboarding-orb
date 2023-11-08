@@ -30,6 +30,11 @@ jobs:
     steps:
       - checkout
       - onboarding-orb/install_node
+  testing:
+    docker:
+      - image: cimg/base:current
+    steps:
+      onboarding-orb/echo
     
 workflows:
   test-deploy:
