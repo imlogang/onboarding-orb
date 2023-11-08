@@ -46,6 +46,8 @@ workflows:
           filters: *filters
       - node-install-test:
           filters: *filters
+      - testing:
+          filters: *filters
       - onboarding-orb/hello:
           filters: *filters
       - onboarding-orb/hello_default:
