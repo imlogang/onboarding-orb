@@ -16,7 +16,7 @@ parameters:
     type: string
     default: "testing"
   tag:
-    type: default
+    type: string
     default: "latest"
 
 docker:
