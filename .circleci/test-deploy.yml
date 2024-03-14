@@ -68,6 +68,7 @@ workflows:
               para3: *para3
       - onboarding-orb/gcp_test:
           filters: *filters
+          context: GCP_STUFF
       - orb-tools/pack:
           filters: *filters
       - orb-tools/publish:
