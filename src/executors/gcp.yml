@@ -1,0 +1,28 @@
+description: >
+  This is a sample executor using Docker and Node. If you want to provide a custom environment in your orb, insert your image here.
+  If you do not require an executor, you can simply delete this directory.
+
+parameters:
+  location:
+    type: string
+    default: "us-central1-docker.pkg.dev"
+  project:
+    type: string
+    default: "testing-ssh-vps"
+  artifact_name:
+    type: string
+    default: "testing"
+  image_name:
+    type: string
+    default: "testing"
+  tag: 
+    type: default
+    default: "latest"
+
+
+
+docker:
+  - image: << parameters.location >>/<< parameters.project >>/<< parameters.artifact_name >>/<< parameters.image_name >>:<< parameters.tag >>
+    auth:
+      username: _json_key
+      password: $GCLOUD_SERVICE_KEY

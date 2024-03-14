@@ -1,0 +1,7 @@
+description: >
+  Test GCP Image and Auth
+
+executor: gcp
+
+steps:
+  - checkout
