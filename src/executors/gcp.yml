@@ -15,11 +15,9 @@ parameters:
   image_name:
     type: string
     default: "testing"
-  tag: 
-    type: default
+  tag:
+    type: string
     default: "latest"
-
-
 
 docker:
   - image: << parameters.location >>/<< parameters.project >>/<< parameters.artifact_name >>/<< parameters.image_name >>:<< parameters.tag >>

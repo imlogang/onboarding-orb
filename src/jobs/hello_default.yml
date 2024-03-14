@@ -18,6 +18,4 @@ parameters:
       default: default
       type: executor
 steps:
-  - run: echo << parameters.para1 >>
-  - run: echo << parameters.para2 >>
-  - run: echo << parameters.para3 >>
+  - checkout
