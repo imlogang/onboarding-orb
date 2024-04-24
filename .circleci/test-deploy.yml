@@ -63,7 +63,7 @@ workflows:
       - onboarding-orb/hello:
           filters: *filters
           name: hello-container-agent
-          resource_class: logan/container_agent
+          resource_class: logan/container-runner
       - onboarding-orb/gcp_test:
           filters: *filters
           context: GCP_STUFF
