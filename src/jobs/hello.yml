@@ -2,13 +2,18 @@ description: >
   Say hello world
 # What will this job do?
 
-executor: aws
+executor: 
+  name: aws
+  resource_class: << parameters.resource_class >> 
 
 parameters:
   to:
     type: string
     default: "World"
     description: "Hello to whom?"
+  resource_class:
+    default: "medium"
+    type: string
 steps:
   - greet:
       to: << parameters.to >>
