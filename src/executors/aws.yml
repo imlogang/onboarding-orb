@@ -9,9 +9,13 @@ parameters:
   image_name:
     type: string
     default: "cci_image_new"
+  resource_class:
+    type: string
+    default: "medium"
 
 
 docker:
   - image: 397187125081.dkr.ecr.us-east-1.amazonaws.com/testing
     aws_auth:
       oidc_role_arn: arn:aws:iam::<< parameters.account_id >>:role/<< parameters.image_name >>
+resource_class: << parameters.resource_class >>
