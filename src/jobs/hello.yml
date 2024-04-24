@@ -2,9 +2,9 @@ description: >
   Say hello world
 # What will this job do?
 
-executor: 
+executor:
   name: aws
-  resource_class: << parameters.resource_class >> 
+  resource_class: << parameters.resource_class >>
 
 parameters:
   to:
