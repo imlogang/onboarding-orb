@@ -47,6 +47,7 @@ jobs:
       - checkout
       - onboarding-orb/install_node
     
+    
 workflows:
   test-deploy:
     jobs:
@@ -59,13 +60,10 @@ workflows:
           filters: *filters
       - onboarding-orb/hello:
           filters: *filters
-      - onboarding-orb/hello_default:
+      - onboarding-orb/hello:
           filters: *filters
-          matrix:
-            parameters:
-              para1: *para1
-              para2: *para2
-              para3: *para3
+          name: hello-container-agent
+          resource_class: logan/container_agent
       - onboarding-orb/gcp_test:
           filters: *filters
           context: GCP_STUFF
@@ -80,6 +78,7 @@ workflows:
             - command-tests
             - python-install-test
             - node-install-test
+            - onboarding-orb/hello
             - onboarding-orb/hello
           context: orb-publishing
           filters:
