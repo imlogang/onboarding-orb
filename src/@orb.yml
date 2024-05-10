@@ -13,3 +13,4 @@ display:
 # If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
 orbs:
   node: circleci/node@5.0.3
+  beemoviebot-orb: logan/beemoviebot-orb@0.3.2
