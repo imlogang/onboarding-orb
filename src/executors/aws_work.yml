@@ -18,7 +18,7 @@ parameters:
   tag:
     default: latest
     type: string
-  
+
 docker:
   - image: << parameters.account_id >>.dkr.ecr.us-east-1.amazonaws.com/<< parameters.image_name >>:<< parameters.tag >>
     aws_auth:
