@@ -18,9 +18,12 @@ parameters:
   tag:
     default: latest
     type: string
+  region:
+    default: "us-east-2"
+    type: string
 
 docker:
-  - image: << parameters.account_id >>.dkr.ecr.us-east-1.amazonaws.com/<< parameters.image_name >>:<< parameters.tag >>
+  - image: << parameters.account_id >>.dkr.ecr.<< paramters.region >>.amazonaws.com/<< parameters.image_name >>:<< parameters.tag >>
     aws_auth:
       oidc_role_arn: arn:aws:iam::<< parameters.account_id >>:role/<< parameters.profile_name >>
 resource_class: << parameters.resource_class >>
