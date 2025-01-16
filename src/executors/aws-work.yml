@@ -1,0 +1,28 @@
+description: >
+  This is a sample executor using Docker and Node. If you want to provide a custom environment in your orb, insert your image here.
+  If you do not require an executor, you can simply delete this directory.
+
+parameters:
+  account_id:
+    type: string
+    default: "992382483259"
+  profile_name:
+    type: string
+    default: "logan-ecr-pull"
+  resource_class:
+    type: string
+    default: "medium"
+  image_name: 
+    default: ""
+    type: string
+  tag: 
+    default: latest
+    type: string
+  
+
+
+docker:
+  - image: << parameters.account_id >>.dkr.ecr.us-east-1.amazonaws.com/<< parameters.image_name >>:<< parameters.tag >>
+    aws_auth: 
+      oidc_role_arn: arn:aws:iam::<< parameters.account_id >>:role/<< parameters.profile_name >>
+resource_class: << parameters.resource_class >>
