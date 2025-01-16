@@ -58,17 +58,12 @@ workflows:
           filters: *filters
       - node-install-test:
           filters: *filters
-      - onboarding-orb/hello:
-          filters: *filters
-      - onboarding-orb/hello:
-          filters: *filters
-          name: hello-container-agent
-          resource_class: logan/container-runner
       - onboarding-orb/gcp_test:
           filters: *filters
           context: GCP_STUFF
       - orb-tools/pack:
           filters: *filters
+          org_id: a861ae53-fb0b-46ba-9bcb-bf024f4c9011
       - orb-tools/publish:
           orb_name: logan/onboarding-orb
           vcs_type: << pipeline.project.type >>
@@ -78,8 +73,6 @@ workflows:
             - command-tests
             - python-install-test
             - node-install-test
-            - onboarding-orb/hello
-            - onboarding-orb/hello
           context: orb-publishing
           filters:
             branches:
